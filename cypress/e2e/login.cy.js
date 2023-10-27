@@ -1,5 +1,6 @@
 /// <reference types="cypress" />
 
+
 context('Funcionalidade Login', () => { 
 
   beforeEach(() => {
@@ -24,7 +25,6 @@ context('Funcionalidade Login', () => {
     cy.get('#username').type('aluno_ebac@teste')
     cy.get('#password').type('teste@teste')
     cy.get('.woocommerce-form > .button').click()
-
     cy.get('.woocommerce-error').should('contain', 'Erro: o usuário aluno_ebac@teste não está cadastrado neste site.')
     
   })
